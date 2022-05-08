@@ -15,7 +15,6 @@ Add-Type @"
 end
 
 set -g __done_initial_wid (__done_grab_wid)
-echo "You're window ID is $__done_initial_wid."
 
 function __done_post_callback --on-event fish_prompt
    # only think about sending notif after 5s
