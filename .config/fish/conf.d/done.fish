@@ -1,10 +1,28 @@
 status is-interactive || exit
 
-function _done_callback --on-event fish_prompt
-   echo "_done_callback called" 
+function __done_grab_wid
+   powershell.exe '
+Add-Type @"
+   using System;
+   using System.Runtime.InteropServices;
+   public class WindowsCompat {
+      [DllImport("user32.dll")]
+      public static extern IntPtr GetForegroundWindow();
+   }
+"@
+[WindowsCompat]::GetForegroundWindow()
+'
+end
 
-   # only think about sending notif after 30 seconds
-   test "$CMD_DURATION" -lt 30000 && set _hydro_cmd_duration && return
+set -g __done_initial_wid (__done_grab_wid)
+echo "You're window ID is $__done_initial_wid."
+
+function __done_post_callback --on-event fish_prompt
+   # only think about sending notif after 5s
+   test "$CMD_DURATION" -lt 5000 && return
+
+   # only run if not focussed
+   test $__done_initial_wid -eq (__done_grab_wid) && return
 
    # get command duration
    set --local humanised_seconds ""
@@ -22,9 +40,7 @@ function _done_callback --on-event fish_prompt
       set title "Failed ($status) after$humanised_seconds"
    end
    
-   echo "$title"
-
-   powershell.exe -command New-BurntToastNotification -Text "$title"
+   powershell.exe -command "[void](New-BurntToastNotification -Text '$title')" &
 
 end
 
