@@ -12,6 +12,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'preservim/nerdtree'
+" Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+Plug 'liuchengxu/vim-which-key'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive' 
 Plug 'sheerun/vim-polyglot'
