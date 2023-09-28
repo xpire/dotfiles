@@ -19,7 +19,8 @@ SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:/home/xpirep/\x2econfig/f
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/xpirep/\x2econfig/fish/functions/fisher\x2efish\x1e/home/xpirep/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_hydro_files:/home/xpirep/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e/home/xpirep/\x2econfig/fish/functions/fish_prompt\x2efish\x1e/home/xpirep/\x2econfig/fish/functions/fish_title\x2efish\x1e/home/xpirep/\x2econfig/fish/conf\x2ed/hydro\x2efish
 SETUVAR _fisher_jorgebucaran_2F_replay_2E_fish_files:/home/xpirep/\x2econfig/fish/functions/replay\x2efish\x1e/home/xpirep/\x2econfig/fish/completions/replay\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/autopair\x2efish\x1egazorby/fish\x2dabbreviation\x2dtips\x1ejorgebucaran/hydro\x1ejethrokuan/z\x1ePatrickF1/fzf\x2efish\x1eFabioAntunes/fish\x2dnvm\x1eedc/bass\x1ejorgebucaran/replay\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/autopair\x2efish\x1egazorby/fish\x2dabbreviation\x2dtips\x1ejorgebucaran/hydro\x1ejethrokuan/z\x1ePatrickF1/fzf\x2efish\x1eFabioAntunes/fish\x2dnvm\x1ejorgebucaran/replay\x2efish\x1eedc/bass
+SETUVAR _hydro_git_1189:master\x20
 SETUVAR _hydro_git_16810:\x1d
 SETUVAR _hydro_git_669:\x1d
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
